@@ -128,7 +128,10 @@ function RegisterScreen({ navigation }) {
     setdate(currentDate);
   };
   return (
-    <KeyboardAvoidingView style={styles.container} enabled behavior="height">
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS == "ios" ? "padding" : "height"}
+    >
       <ScrollView style={{}}>
         <View style={{ alignItems: "center" }}>
           <Image

@@ -90,7 +90,6 @@ export default ({ navgation, result, review }) => {
         >
           <Icon name="share" onPress={onShare} />
         </Fab>
-
         <Avatar
           source={
             state2.title == "Mrs." ||
@@ -107,6 +106,14 @@ export default ({ navgation, result, review }) => {
             marginTop: 60,
           }}
         />
+        <View style={{ flexDirection: "row" }}>
+          <Icon
+            name="primitive-dot"
+            type="Octicons"
+            style={{ color: "#29eb0c" }}
+          />
+          <Text style={{ fontSize: 18 }}>{state2.status}</Text>
+        </View>
       </View>
       <View>
         <Card>
@@ -115,18 +122,8 @@ export default ({ navgation, result, review }) => {
             <Left>
               <Text>Name</Text>
             </Left>
-            <Body>
-              <Text> {state2.name}</Text>
-            </Body>
             <Right>
-              <Text style={{ fontSize: 18 }}>
-                <Icon
-                  name="primitive-dot"
-                  type="Octicons"
-                  style={{ color: "#29eb0c" }}
-                />
-                {state2.status}
-              </Text>
+              <Text> {state2.name}</Text>
             </Right>
           </CardItem>
           <CardItem>
